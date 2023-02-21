@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
         ]);
       },
       routes: const [
-        PostsRouter(),MessageListRoute(),AuthRouter()
+        PostsRouter(),MessagesRouter(),AuthRouter()
       ],
     );
   }

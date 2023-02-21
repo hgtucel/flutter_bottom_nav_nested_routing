@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Bottom Nav Nested Routing',
       routerDelegate: appRouter.delegate(),
       routeInformationParser: appRouter.defaultRouteParser(),

@@ -61,9 +61,16 @@ class AppRouter extends _i10.RootStackRouter {
       );
     },
     PostDetailRoute.name: (routeData) {
+      final pathParams = routeData.inheritedPathParams;
+      final args = routeData.argsAs<PostDetailRouteArgs>(
+          orElse: () =>
+              PostDetailRouteArgs(title: pathParams.optString('title')));
       return _i10.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i4.PostDetailPage(),
+        child: _i4.PostDetailPage(
+          key: args.key,
+          title: args.title,
+        ),
       );
     },
     MessageListRoute.name: (routeData) {
@@ -116,7 +123,7 @@ class AppRouter extends _i10.RootStackRouter {
                 ),
                 _i10.RouteConfig(
                   PostDetailRoute.name,
-                  path: ':postId',
+                  path: ':title',
                   parent: PostsRouter.name,
                 ),
               ],
@@ -231,14 +238,37 @@ class PostListRoute extends _i10.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.PostDetailPage]
-class PostDetailRoute extends _i10.PageRouteInfo<void> {
-  const PostDetailRoute()
-      : super(
+class PostDetailRoute extends _i10.PageRouteInfo<PostDetailRouteArgs> {
+  PostDetailRoute({
+    _i11.Key? key,
+    String? title,
+  }) : super(
           PostDetailRoute.name,
-          path: ':postId',
+          path: ':title',
+          args: PostDetailRouteArgs(
+            key: key,
+            title: title,
+          ),
+          rawPathParams: {'title': title},
         );
 
   static const String name = 'PostDetailRoute';
+}
+
+class PostDetailRouteArgs {
+  const PostDetailRouteArgs({
+    this.key,
+    this.title,
+  });
+
+  final _i11.Key? key;
+
+  final String? title;
+
+  @override
+  String toString() {
+    return 'PostDetailRouteArgs{key: $key, title: $title}';
+  }
 }
 
 /// generated route for

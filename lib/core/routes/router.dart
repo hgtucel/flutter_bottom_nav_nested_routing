@@ -15,7 +15,7 @@ import 'package:flutter_bottom_nav_nested_routing/pages/post/post_list.dart';
     AutoRoute(path: '/', page: HomePage, children: [
       AutoRoute(path: "posts", name: "PostsRouter", page: EmptyRouterPage, children: [
         AutoRoute(path: '', page: PostListPage),
-        AutoRoute(path: ':postId', page: PostDetailPage),
+        AutoRoute(path: ':title', page: PostDetailPage),
       ]),
       AutoRoute(path: "messages", name: "MessagesRouter", page: EmptyRouterPage, children: [
         AutoRoute(path: '', page: MessageListPage),
