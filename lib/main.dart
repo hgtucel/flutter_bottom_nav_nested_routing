@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bottom_nav_nested_routing/core/routes/router.gr.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  AppRouter appRouter = AppRouter();
 
   // This widget is the root of your application.
   @override
