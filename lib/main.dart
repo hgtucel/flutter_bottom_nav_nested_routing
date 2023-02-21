@@ -8,13 +8,15 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  AppRouter appRouter = AppRouter();
+  final AppRouter appRouter = AppRouter();
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Flutter Bottom Nav Nested Routing',
+      routerDelegate: appRouter.delegate(),
+      routeInformationParser: appRouter.defaultRouteParser(),
     );
   }
 }
