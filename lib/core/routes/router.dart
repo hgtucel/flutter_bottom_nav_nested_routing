@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route/empty_router_widgets.dart';
 import 'package:flutter_bottom_nav_nested_routing/pages/auth/edit_password.dart';
 import 'package:flutter_bottom_nav_nested_routing/pages/auth/edit_profile.dart';
 import 'package:flutter_bottom_nav_nested_routing/pages/auth/profile_page.dart';
@@ -12,15 +13,15 @@ import 'package:flutter_bottom_nav_nested_routing/pages/post/post_list.dart';
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
     AutoRoute(path: '/', page: HomePage, children: [
-      AutoRoute(path: "posts", name: "PostsRouter", children: [
+      AutoRoute(path: "posts", name: "PostsRouter", page: EmptyRouterPage, children: [
         AutoRoute(path: '', page: PostListPage),
         AutoRoute(path: ':postId', page: PostDetailPage),
       ]),
-      AutoRoute(path: "messages", name: "MessagesRouter", children: [
+      AutoRoute(path: "messages", name: "MessagesRouter", page: EmptyRouterPage, children: [
         AutoRoute(path: '', page: MessageListPage),
         AutoRoute(path: 'addMessage', page: AddMessagePage),
       ]),
-      AutoRoute(path: "auth", name: "AuthRouter", children: [
+      AutoRoute(path: "auth", name: "AuthRouter", page: EmptyRouterPage, children: [
         AutoRoute(path: '', page: ProfilePage),
         AutoRoute(path: ':profileId', page: EditProfilePage),
         AutoRoute(path: 'editPassword', page: EditPasswordPage),
