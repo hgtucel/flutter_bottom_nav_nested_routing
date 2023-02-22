@@ -27,6 +27,7 @@ class _PostListPageState extends State<PostListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Image.asset("assets/hgt.png"),
         actions: [
           TextButton(onPressed: (){
             context.navigateTo(const MessagesRouter(children: [AddMessageRoute()]));
