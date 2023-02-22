@@ -2,7 +2,7 @@
 
 <img src="https://storage.googleapis.com/cms-storage-bucket/847ae81f5430402216fd.svg" width="128" />
 
-Project work that provides convenient navigation between Decals using Flutter Auto Route.
+Project work that provides convenient navigation between Tabs using Flutter Auto Route.
 
 ## Packages
 
