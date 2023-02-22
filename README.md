@@ -1,16 +1,19 @@
 # flutter_bottom_nav_nested_routing
 
-A new Flutter project.
+<img src="https://storage.googleapis.com/cms-storage-bucket/847ae81f5430402216fd.svg" width="128" />
 
-## Getting Started
+Project work that provides convenient navigation between Decals using Flutter Auto Route.
 
-This project is a starting point for a Flutter application.
+## Packages
 
-A few resources to get you started if this is your first Flutter project:
+dependencies: <a href="https://pub.dev/packages/auto_route">auto_route</a> <br />
+dev_dependencies: <a href="https://pub.dev/packages/auto_route_generator">auto_route_generator</a>, <a href="https://pub.dev/packages/build_runner">build_runner</a>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+From the generated schema (router.dart) terminal code that allows code generation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+`flutter pub run build_runner build --delete-conflicting-outputs`
+
+### Screen Recording
+
+<img src='https://github.com/hgtucel/flutter_bottom_nav_nested_routing/blob/main/ss.gif' width='250'>
+
