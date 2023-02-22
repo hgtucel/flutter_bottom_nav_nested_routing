@@ -17,7 +17,7 @@ class _PostListPageState extends State<PostListPage> {
   void initState() {
     posts = [
       PostModel(id: 0, title: "What is Lorem Ipsum?"),
-      PostModel(id: 1, title: "Why do we use it?"),
+      PostModel(id: 1, title: "Why do we use it?"), 
       PostModel(id: 2, title: "Where does it come from?")
     ];
     super.initState();
@@ -26,7 +26,13 @@ class _PostListPageState extends State<PostListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          TextButton(onPressed: (){
+            context.navigateTo(const MessagesRouter(children: [AddMessageRoute()]));
+          }, child: const Text("ADD MESSAGE", style: TextStyle(color: Colors.white),))
+        ],
+      ),
       body: ListView.builder(
         itemCount: posts?.length,
         itemBuilder:(context, index) {
