@@ -6,8 +6,8 @@ Project work that provides convenient navigation between Tabs using Flutter Auto
 
 ## Packages
 
-dependencies: <a href="https://pub.dev/packages/auto_route">auto_route</a> <br />
-dev_dependencies: <a href="https://pub.dev/packages/auto_route_generator">auto_route_generator</a>, <a href="https://pub.dev/packages/build_runner">build_runner</a>
+dependencies: <a href="https://pub.dev/packages/auto_route" target="_blank">auto_route</a> <br />
+dev_dependencies: <a href="https://pub.dev/packages/auto_route_generator" target="_blank">auto_route_generator</a>, <a href="https://pub.dev/packages/build_runner" target="_blank">build_runner</a>
 
 From the generated schema (router.dart) terminal code that allows code generation
 
